@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="card" style="width: 18rem;" *ngFor="let us of User">
+        <div class="card-body">
+          <h4 class="card-title">Nombre: {{us.name}}</h4>
+          <h4 class="card-title">Email: {{us.email}}</h4>
+          <h4 class="card-title">Teléfono: {{us.phone}}</h4>
+          <a routerLink="['/usuario/:id']" class="btn btn-primary">Detalle</a>
+          <a (click)="eliminar()" class="btn btn-primary">Eliminar</a>
+        </div>
+      </div>
+</div>
+<p>usuarios aca</p>
