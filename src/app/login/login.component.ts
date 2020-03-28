@@ -1,5 +1,5 @@
 import { Component, OnInit ,ViewChild,ElementRef } from '@angular/core';
-
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
     
   @ViewChild('myUser', {static: true}) myUser: ElementRef;
   @ViewChild('myPass', {static: true}) myPass: ElementRef;
-  constructor() {
+  constructor(private router: Router) {
     
    } 
 
@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
     if(inputValue == this.usuarioOriginal && passValuer == this.contrasenaOriginal)
     {
       alert('OkUser')
+      this.router.navigateByUrl('/usuarios');
     }
     else{
       alert('UserNoOk')
